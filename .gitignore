@@ -25,13 +25,17 @@ env/
 *.pem
 *.key
 
-# Local tooling & agent cache (keep tracked rules & AGENTS.md)
+# Local tooling & agent cache (keep tracked project rules & AGENTS.md)
 .codegraph/codegraph.db
 .codegraph/*.db*
 docs/maestro/
 .agents/*
 !.agents/AGENTS.md
 !.agents/rules/
+.agents/rules/*
+!.agents/rules/ponytail.md
+!.agents/rules/common/
+!.agents/rules/python/
 
 # OS & editor artifacts
 .DS_Store
