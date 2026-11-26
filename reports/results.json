@@ -1,0 +1,105 @@
+{
+  "config": {
+    "seed": 42,
+    "n_samples": 2675,
+    "caliper_sd_multiplier": 0.2,
+    "n_bootstrap": 200,
+    "trim_bounds": [
+      0.01,
+      0.99
+    ],
+    "locale": "en",
+    "max_smd_threshold": 0.1
+  },
+  "n_total": 2675,
+  "n_treated": 298,
+  "n_control": 2377,
+  "true_att_benchmark": 1800.0,
+  "propensity_metrics": {
+    "cv_auc_roc": 0.869143751782321,
+    "cv_precision": 0.30451612903225805,
+    "cv_recall": 0.7919463087248322,
+    "common_support_fraction": 0.7581308411214953,
+    "treated_in_support": 291,
+    "control_in_support": 1737
+  },
+  "covariate_balance": {
+    "smd_before": {
+      "age": -0.8885,
+      "education": -1.1805,
+      "black": 0.7251,
+      "hispanic": -0.0079,
+      "married": -0.5881,
+      "nodegree": 1.1581,
+      "re74": -1.4756,
+      "re75": -1.4875
+    },
+    "smd_after": {
+      "age": -0.0367,
+      "education": -0.0061,
+      "black": -0.0071,
+      "hispanic": -0.0114,
+      "married": -0.0299,
+      "nodegree": -0.0321,
+      "re74": -0.0933,
+      "re75": -0.0875
+    },
+    "max_abs_smd_before": 1.4875,
+    "max_abs_smd_after": 0.0933,
+    "balanced": true
+  },
+  "estimators": [
+    {
+      "method": "Naive Difference-in-Means",
+      "estimate": -6166.370181436756,
+      "se": 326.76329777715466,
+      "ci_low": -6806.814476549516,
+      "ci_high": -5525.925886323996,
+      "n_treated": 298,
+      "n_control": 2377
+    },
+    {
+      "method": "Propensity Score Matching (ATT)",
+      "estimate": 1512.0337366548042,
+      "se": 209.24000314668325,
+      "ci_low": 1088.2083523131673,
+      "ci_high": 1915.237693060499,
+      "n_treated": 281,
+      "n_control": 281
+    },
+    {
+      "method": "Inverse Probability Weighting (ATT)",
+      "estimate": 1877.961346278118,
+      "se": 386.06363742300897,
+      "ci_low": 1078.7320546881485,
+      "ci_high": 2595.501006067226,
+      "n_treated": 291,
+      "n_control": 1737
+    },
+    {
+      "method": "Doubly Robust AIPW (ATT)",
+      "estimate": 1897.1140612595043,
+      "se": 156.8300628510558,
+      "ci_low": 1589.7327863782818,
+      "ci_high": 2204.495336140727,
+      "n_treated": 291,
+      "n_control": 1737
+    },
+    {
+      "method": "Difference-in-Differences (DiD)",
+      "estimate": 1976.9222843920911,
+      "se": 99.34130812592431,
+      "ci_low": 1782.2168982881833,
+      "ci_high": 2171.627670495999,
+      "n_treated": 298,
+      "n_control": 2377
+    }
+  ],
+  "sensitivity": {
+    "e_value_point": 1.801,
+    "e_value_ci": 1.621,
+    "placebo_effect": -203.43,
+    "placebo_p_value": 0.3775,
+    "gamma_critical": 1.55
+  }
+}
