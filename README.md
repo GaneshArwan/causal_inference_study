@@ -1,5 +1,6 @@
 # Causal Inference Study: Job Training Earnings Impact
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://causal-inference-study.streamlit.app/)
 [![Open EDA in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GaneshArwan/causal_inference_study/blob/main/notebooks/01_eda.ipynb)
 [![Open Modeling in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GaneshArwan/causal_inference_study/blob/main/notebooks/02_modeling.ipynb)
 
@@ -77,7 +78,7 @@ bandit -r src app.py
 - `src/causal_engine.py` — Naive ATE, L2 propensity model, optimal 1:1 without-replacement matching (`scipy.optimize.linear_sum_assignment`), Hajek IPW with stratified bootstrap, cross-fitted Ridge AIPW with analytical EIF SE, DiD, and sensitivity suite.
 - `src/i18n.py` — `Babel` currency/decimal formatting and bilingual (`en` / `id`) message catalog.
 - `src/train.py` — CLI runner generating [results.json](reports/results.json), [causal_report.md](reports/causal_report.md), and 4 PNG figures in `reports/figures/`.
-- `app.py` — Interactive Streamlit explorer with live caliper slider, bootstrap control, dynamic plots, and English/Indonesian toggle.
+- `app.py` — Interactive Streamlit explorer ([Live Demo](https://causal-inference-study.streamlit.app/)) with live caliper slider, bootstrap control, dynamic plots, and English/Indonesian toggle.
 - `notebooks/01_eda.ipynb` & `notebooks/02_modeling.ipynb` — Colab-ready exploratory and modeling notebooks.
 - `docs/blog_post.md` — Plain-language methodology write-up.
 - `tests/test_causal_study.py` — `11` unit and end-to-end integration tests.
